@@ -23,7 +23,7 @@ def autoPage():
 	exportName = config.targetName + ' ' + timeName
 	exportPath = os.path.join(config.exportPath, exportName)
 	print('\n== Start Export Please Wait ... ==')
-	exportCmd = 'xcodebuild -exportArchive -archivePath ' + xcarchivePath + ' -exportPath ' + exportPath + ' -exportOptionsPlist ' + config.ExportOptionsPath
+	exportCmd = 'xcodebuild -exportArchive -archivePath ' + xcarchivePath + ' -exportPath ' + exportPath + ' -exportOptionsPlist ' + config.exportOptionsPath
 	exportProcess = subprocess.Popen(exportCmd, shell=True)
 	exportProcess.wait()
 
